@@ -6,9 +6,9 @@ package websocket
 import (
 	"errors"
 	"fmt"
-	"github.com/NattapornTee22816/binance-connector-golang/lib"
 	"github.com/gorilla/websocket"
 	"github.com/jpillora/backoff"
+	"github.com/ooppwwqq0/binance-connector-golang/lib"
 	"math/rand"
 	"net/http"
 	"sync"

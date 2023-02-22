@@ -1,8 +1,8 @@
 package model
 
 import (
-	"github.com/NattapornTee22816/binance-connector-golang/lib"
 	"github.com/buger/jsonparser"
+	"github.com/ooppwwqq0/binance-connector-golang/lib"
 	"time"
 )
 

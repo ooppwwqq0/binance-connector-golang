@@ -2,8 +2,8 @@ package spot
 
 import (
 	"encoding/json"
-	"github.com/NattapornTee22816/binance-connector-golang/model"
 	"github.com/buger/jsonparser"
+	"github.com/ooppwwqq0/binance-connector-golang/model"
 	"net/http"
 )
 

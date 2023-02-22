@@ -1,7 +1,7 @@
 package websocket
 
 import (
-	"github.com/NattapornTee22816/binance-connector-golang/model"
+	"github.com/ooppwwqq0/binance-connector-golang/model"
 	"strings"
 )
 

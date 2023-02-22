@@ -1,6 +1,6 @@
-module github.com/NattapornTee22816/binance-connector-golang
+module github.com/ooppwwqq0/binance-connector-golang
 
-go 1.18
+go 1.17
 
 require (
 	github.com/buger/jsonparser v1.1.1

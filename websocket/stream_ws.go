@@ -3,7 +3,7 @@ package websocket
 import (
 	"errors"
 	"fmt"
-	"github.com/NattapornTee22816/binance-connector-golang/lib"
+	"github.com/ooppwwqq0/binance-connector-golang/lib"
 	"regexp"
 	"sync"
 	"time"
