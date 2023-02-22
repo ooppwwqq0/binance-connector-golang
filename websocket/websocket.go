@@ -157,6 +157,9 @@ func (ws *Websocket) Connect() {
 func (ws *Websocket) SetPingHandler() {
 	ticker := time.NewTicker(ws.PingDuration)
 	defer func() {
+		if r := recover(); r != nil {
+			ws.logger.Info(fmt.Sprintf("websocket[%d] ping error", ws.id))
+		}
 		ticker.Stop()
 	}()
 
@@ -169,6 +172,7 @@ func (ws *Websocket) SetPingHandler() {
 		}
 		select {
 		case <-ticker.C:
+			fmt.Println(time.Now().Add(time.Second))
 			_ = ws.conn.SetWriteDeadline(time.Now().Add(time.Second))
 			if err := ws.conn.WriteMessage(websocket.PingMessage, []byte{}); err != nil {
 				ws.logger.Error(err.Error())
