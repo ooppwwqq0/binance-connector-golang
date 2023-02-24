@@ -46,6 +46,11 @@ type Websocket struct {
 
 func (ws *Websocket) WriteJSON(v interface{}) error {
 	err := ErrNotConnected
+	defer func() {
+		if r := recover(); r != nil {
+			ws.logger.Error(r.(string))
+		}
+	}()
 	if ws.IsNotDone() && ws.IsConnected() {
 		err = ws.conn.WriteJSON(v)
 		if err != nil {
